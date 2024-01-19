@@ -16,5 +16,5 @@ jobs:
       - name: Checkout Push to Registry action
         uses: actions/checkout@v4
       - name: buildit
-        run: mkosi -f
+        run: sudo mkosi -f
             
