@@ -17,6 +17,8 @@ jobs:
         uses: actions/checkout@v4
       - name: setup-mkosi
         uses: systemd/mkosi@v20.1
+      - name: systemd-repart
+        run: apt-get update && apt-get install -y systemd-repart
       - name: buildit
         run: mkosi -f
             
