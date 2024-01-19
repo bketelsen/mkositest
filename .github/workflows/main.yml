@@ -18,7 +18,7 @@ jobs:
       - name: setup-mkosi
         uses: systemd/mkosi@v20.1
       - name: systemd-repart
-        run: apt-get update && apt-get install -y systemd-repart
+        run: sudo apt-get update && sudo apt-get install -y systemd-repart
       - name: buildit
         run: mkosi -f
             
