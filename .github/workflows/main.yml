@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+    - main
+    - release/*
+jobs:
+  push-ghcr:
+    name: Build and push image
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+    steps:
+      # Checkout push-to-registry action GitHub repository
+      - name: Checkout Push to Registry action
+        uses: actions/checkout@v4
+      - name: setup-mkosi
+        uses: systemd/mkosi@v20.1
+            
